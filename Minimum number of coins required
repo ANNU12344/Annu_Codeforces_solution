@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+vector<int> MinimumCoins(int n)
+{
+    // Write your code here
+    vector<int> vec1;
+    vector<int> coins{1,2,5,10,20,50,100,500,1000};
+    int size=coins.size();
+    int i=size-1;
+    while(n!=0)
+    {
+        if(coins[i]<=n)
+        {
+            n=n-coins[i];
+            vec1.push_back(coins[i]);
+        }
+        else{
+             i--;
+            }
+        
+    }
+    return vec1;
+
+}
